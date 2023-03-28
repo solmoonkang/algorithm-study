@@ -1,6 +1,4 @@
-package csStudyCodingTest;
-
-import java.util.Stack;
+package codingTest2;
 
 public class 올바른괄호 {
 

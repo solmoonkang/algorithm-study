@@ -1,4 +1,4 @@
-package csStudyCodingTest;
+package codingTest2;
 
 import java.util.StringTokenizer;
 

@@ -1,4 +1,4 @@
-package csStudyCodingTest;
+package codingTest2;
 
 public class 최댓값과최솟값 {
     // Method
