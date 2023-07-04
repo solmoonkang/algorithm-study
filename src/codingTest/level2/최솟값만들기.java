@@ -1,4 +1,4 @@
-package codingTest2;
+package codingTest.level2;
 
 import java.util.Arrays;
 
