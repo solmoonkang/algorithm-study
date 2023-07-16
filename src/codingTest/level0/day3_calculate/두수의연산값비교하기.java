@@ -1,4 +1,4 @@
-package codingTest.level0.day3;
+package codingTest.level0.day3_calculate;
 
 public class 두수의연산값비교하기 {
 

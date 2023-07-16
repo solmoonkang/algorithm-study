@@ -1,4 +1,4 @@
-package codingTest.level0.day3;
+package codingTest.level0.day3_calculate;
 
 import java.util.ArrayList;
 import java.util.Arrays;

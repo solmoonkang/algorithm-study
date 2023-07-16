@@ -1,6 +1,4 @@
-package codingTest.level0.day1;
-
-import java.util.Scanner;
+package codingTest.level0.day1_print;
 
 public class 특수문자출력하기 {
 

@@ -1,4 +1,4 @@
-package codingTest.level0.day1;
+package codingTest.level0.day1_print;
 
 import java.util.Scanner;
 

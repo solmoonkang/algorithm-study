@@ -1,4 +1,4 @@
-package codingTest.level0.day3;
+package codingTest.level0.day3_calculate;
 
 public class 더크게합치기 {
 
