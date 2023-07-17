@@ -1,6 +1,6 @@
 package codingTest.level0.day4_calculate_condition;
 
-public class n의배수 {
+public class N의배수 {
 
     public int solution_my(int num, int n) {
 
@@ -22,7 +22,7 @@ public class n의배수 {
 
     public static void main(String[] args) {
 
-        n의배수 result = new n의배수();
+        N의배수 result = new N의배수();
 
         System.out.println("Result : " + result.solution_my(98, 2));
         System.out.println("Result : " + result.solution_my(34, 3));

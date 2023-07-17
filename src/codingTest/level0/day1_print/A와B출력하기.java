@@ -2,7 +2,7 @@ package codingTest.level0.day1_print;
 
 import java.util.Scanner;
 
-public class a와b출력하기 {
+public class A와B출력하기 {
 
     public static void main(String[] args) {
 
