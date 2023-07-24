@@ -1,4 +1,4 @@
-package codingTest.level0.day1_print;
+package codingTest.level0.day1;
 
 public class 특수문자출력하기 {
 

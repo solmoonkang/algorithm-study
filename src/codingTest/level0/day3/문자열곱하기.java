@@ -1,4 +1,4 @@
-package codingTest.level0.day3_calculate;
+package codingTest.level0.day3;
 
 public class 문자열곱하기 {
 

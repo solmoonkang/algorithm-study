@@ -1,4 +1,4 @@
-package codingTest.level0.day4_calculate_condition;
+package codingTest.level0.day4;
 
 import java.util.Map;
 import java.util.Scanner;

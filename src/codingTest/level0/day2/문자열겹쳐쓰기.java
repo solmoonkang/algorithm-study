@@ -1,4 +1,4 @@
-package codingTest.level0.day2_print_calculate;
+package codingTest.level0.day2;
 
 public class 문자열겹쳐쓰기 {
 

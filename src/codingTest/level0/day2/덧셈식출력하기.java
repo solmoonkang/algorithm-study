@@ -1,4 +1,4 @@
-package codingTest.level0.day2_print_calculate;
+package codingTest.level0.day2;
 
 import java.util.Scanner;
 

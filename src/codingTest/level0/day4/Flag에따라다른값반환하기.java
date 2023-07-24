@@ -1,4 +1,4 @@
-package codingTest.level0.day4_calculate_condition;
+package codingTest.level0.day4;
 
 public class Flag에따라다른값반환하기 {
 
