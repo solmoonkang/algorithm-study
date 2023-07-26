@@ -26,6 +26,20 @@ public class ExampleHash3 {
         }
 
 
-        Map<String, List<String>> listMap = new HashMap<>();
+        System.out.println("===== getOrDefault( ) =====");
+
+        String[] str = {"A", "B", "C", "C", "D", "A"};
+
+        Map<String, Integer> alphabets = new HashMap<>();
+
+        for (String alphabet : str) {
+
+            alphabets.put(alphabet, alphabets.getOrDefault(alphabet, 0) + 1);
+        }
+
+        for (Map.Entry<String, Integer> entry : alphabets.entrySet()) {
+
+            System.out.println("Key : " + entry.getKey() + ", Value : " + entry.getValue());
+        }
     }
 }
