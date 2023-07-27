@@ -1,4 +1,4 @@
-package programmers.foundation.level0;
+package programmers.foundation.level0.day5;
 
 public class 이어붙인수 {
 

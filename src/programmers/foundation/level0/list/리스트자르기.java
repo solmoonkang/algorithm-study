@@ -1,4 +1,4 @@
-package programmers.foundation.level0;
+package programmers.foundation.level0.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;

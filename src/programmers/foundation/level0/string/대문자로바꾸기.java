@@ -1,4 +1,4 @@
-package programmers.foundation.level0;
+package programmers.foundation.level0.string;
 
 public class 대문자로바꾸기 {
 
