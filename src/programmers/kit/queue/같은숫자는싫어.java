@@ -1,4 +1,4 @@
-package programmers.kit.stack_que;
+package programmers.kit.queue;
 
 import java.util.*;
 
