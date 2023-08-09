@@ -13,53 +13,37 @@ public class 코드처리하기 {
      *      code[idx]가 1이면, mode 를 1에서 0으로 바꾼다
      */
 
-    public String solution_my(String code) {
+    public String solution(String code) {
 
         String answer = "";
 
-        char mode = '0';
+        int mode = 0;
 
         for (int i = 0; i < code.length(); i++) {
 
+            // 만약, code 에 1이 있다면,
             if (code.charAt(i) == '1') {
 
-                mode = (mode == '0' ? '1' : '0');
+                // 모드를 토글한다 즉, 0은 1로, 1은 0으로 변경
+                mode = 1 - mode;
 
-                continue;
-            }
+            // 만약, 1이 아닌, 모드에 따라 문자를 선택할 경우,
+            } else if (i % 2 == mode) {
 
-            if (mode == '0') {
+                // answer 에 현재 문자를 추가하며 또한 모드 값과 인덱스의 홀짝 여부를 비교하여 문자 선택 규칙을 적용
+                answer += code.charAt(i);
 
-                // 짝수
-                if (i % 2 == 0) {
-                    answer += code.charAt(i);
-                }
-            } else {
-
-                // 홀수
-                if (i % 2 != 0) {
-                    answer += code.charAt(i);
-                }
             }
         }
 
-        return answer;
-    }
-
-    public String solution_best(String code) {
-
-        String answer = "";
-
-        return answer;
+        // 결과 문자열이 비어있는 경우, "EMPTY" 를 반환하고, 그렇지 않은 경우, 결과 문자열을 반환
+        return "".equals(answer) ? "EMPTY" : answer;
     }
 
     public static void main(String[] args) {
 
         코드처리하기 code = new 코드처리하기();
 
-        System.out.println("Result My : " + code.solution_my("abc1abc1abc"));
-        System.out.println("==============================================");
-
-        System.out.println("Result Best : " + code.solution_best("abc1abc1abc"));
+        System.out.println("Result : " + code.solution("abc1abc1abc"));
     }
 }
