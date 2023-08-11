@@ -2,7 +2,7 @@ package programmers.kit.queue;
 
 import java.util.*;
 
-public class 같은숫자는싫어 {
+public class 같은숫자는싫어 {     // Review Required
 
     public int[] solution_queue(int[] arr) {
 
