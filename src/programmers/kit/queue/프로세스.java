@@ -7,13 +7,46 @@ import java.util.PriorityQueue;
 
 public class 프로세스 {
 
-    // Deque 나 Priority Queue 를 사용해서 구현할 수 있을거 같다
-
     public int solution_deque(int[] priorities, int location) {
 
-        Deque<Integer> deque = new LinkedList<>();
+        Deque<Integer> priority = new LinkedList<>();
+
+        for (int i = 0; i < priorities.length; i++) {
+
+            priority.offerLast(i);
+        }
 
         int answer = 0;
+
+        while (!priority.isEmpty()) {
+
+            int current = priority.pollFirst();
+
+            boolean isHigherPriorityExists = false;
+
+            for (int index : priority) {
+
+                if (priorities[index] > priorities[current]) {
+
+                    isHigherPriorityExists = true;
+                    break;
+                }
+            }
+
+            if (isHigherPriorityExists) {
+
+                priority.offerLast(current);
+            }
+
+            else {
+
+                answer++;
+
+                if (current == location) {
+                    break;
+                }
+            }
+        }
 
         return answer;
     }
@@ -56,9 +89,9 @@ public class 프로세스 {
 
         프로세스 process = new 프로세스();
 
-        int[] priorities = {2, 1, 3, 2};
+        int[] priorities = {1, 1, 9, 1, 1, 1};
 
-        System.out.println("Result : " + process.solution_deque(priorities, 2));
-        System.out.println("Result : " + process.solution_priorityQue(priorities, 2));
+        System.out.println("Result : " + process.solution_deque(priorities, 0));
+//        System.out.println("Result : " + process.solution_priorityQue(priorities, 2));
     }
 }
