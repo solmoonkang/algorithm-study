@@ -1,4 +1,4 @@
-package programmers.foundation.level0.list;
+package programmers.foundation.level0;
 
 public class 길이에따른연산 {
 

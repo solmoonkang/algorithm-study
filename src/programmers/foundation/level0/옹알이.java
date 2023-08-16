@@ -1,4 +1,4 @@
-package programmers.foundation.level0.string;
+package programmers.foundation.level0;
 
 import java.util.HashMap;
 

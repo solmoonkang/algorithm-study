@@ -1,4 +1,4 @@
-package programmers.foundation.level0.list;
+package programmers.foundation.level0;
 
 public class 첫번째로나오는음수 {
 
