@@ -10,8 +10,10 @@ public class 수열과구간쿼리2 {     // Review Required
         Arrays.fill(answer, Integer.MAX_VALUE);
 
         for (int i = 0; i < queries.length; i++) {
+//            answer[i] = Integer.MAX_VALUE;
             for (int j = queries[i][0]; j <= queries[i][1]; j++) {
                 if (arr[j] > queries[i][2]) {
+                    // answer[i] 는 현재까지 최솟값을 추적하고, arr[j] 는 현재 위치에서의 값
                     answer[i] = Math.min(answer[i], arr[j]);
                 }
             }
