@@ -9,37 +9,37 @@ public class 프로세스 {
 
     public int solution_deque(int[] priorities, int location) {
 
-        Deque<Integer> priority = new LinkedList<>();
+        // 큐에 대기중인 프로세스를 저장
+        Deque<Integer> deque = new LinkedList<>();
 
         for (int i = 0; i < priorities.length; i++) {
-
-            priority.offerLast(i);
+            deque.offerLast(i);
         }
 
         int answer = 0;
 
-        while (!priority.isEmpty()) {
+        while (!deque.isEmpty()) {
 
-            int current = priority.pollFirst();
-
+            int current = deque.pollFirst();
             boolean isHigherPriorityExists = false;
 
-            for (int index : priority) {
+            for (int index : deque) {
 
                 if (priorities[index] > priorities[current]) {
-
                     isHigherPriorityExists = true;
                     break;
                 }
             }
 
+            // 만약, 대기중인 프로세스 중 우선순위가 더 높은 프로세스가 있을 경우
             if (isHigherPriorityExists) {
-
-                priority.offerLast(current);
+                // 방금 꺼낸 프로세스를 다시 큐에 넣음
+                deque.offerLast(current);
             }
 
+            // 만약, 대기중인 프로세스가 가장 높은 우선순위인 경우
             else {
-
+                // 해당 프로세스를 실행
                 answer++;
 
                 if (current == location) {
