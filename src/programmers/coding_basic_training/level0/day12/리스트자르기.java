@@ -1,4 +1,4 @@
-package programmers.coding_basic_training.level0.practice;
+package programmers.coding_basic_training.level0.day12;
 
 import java.util.ArrayList;
 import java.util.Arrays;
