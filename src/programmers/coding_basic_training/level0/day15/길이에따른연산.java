@@ -1,4 +1,4 @@
-package programmers.coding_basic_training.level0.practice;
+package programmers.coding_basic_training.level0.day15;
 
 public class 길이에따른연산 {
 

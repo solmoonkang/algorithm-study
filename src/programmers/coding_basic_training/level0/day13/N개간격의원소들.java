@@ -1,10 +1,10 @@
-package programmers.coding_basic_training.level0.practice;
+package programmers.coding_basic_training.level0.day13;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class n개간격의원소들 {
+public class N개간격의원소들 {
 
     public int[] solution(int[] num_list, int n) {
 
@@ -22,7 +22,7 @@ public class n개간격의원소들 {
 
     public static void main(String[] args) {
 
-        n개간격의원소들 element = new n개간격의원소들();
+        N개간격의원소들 element = new N개간격의원소들();
 
         int[] num_list = {4, 2, 6, 1, 7, 6};
 

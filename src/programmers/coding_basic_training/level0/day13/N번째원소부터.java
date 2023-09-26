@@ -1,8 +1,8 @@
-package programmers.coding_basic_training.level0.practice;
+package programmers.coding_basic_training.level0.day13;
 
 import java.util.Arrays;
 
-public class n번째원소부터 {
+public class N번째원소부터 {
 
     // Runtime Error
     public int[] solution_array(int[] num_list, int n) {
@@ -25,7 +25,7 @@ public class n번째원소부터 {
 
     public static void main(String[] args) {
 
-        n번째원소부터 element = new n번째원소부터();
+        N번째원소부터 element = new N번째원소부터();
 
         int[] num_list1 = {2, 1, 6};
         int[] num_list2 = {5, 2, 1, 7, 5};
