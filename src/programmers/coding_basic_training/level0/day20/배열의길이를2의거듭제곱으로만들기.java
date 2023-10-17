@@ -1,6 +1,5 @@
 package programmers.coding_basic_training.level0.day20;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class 배열의길이를2의거듭제곱으로만들기 {

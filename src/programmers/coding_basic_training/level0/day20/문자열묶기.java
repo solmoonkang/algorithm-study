@@ -1,22 +1,32 @@
 package programmers.coding_basic_training.level0.day20;
 
+import java.util.HashMap;
+
 public class 문자열묶기 {
 
     public int solution(String[] strArr) {
 
         // strArr 의 원소들을 길이가 같은 문자열들끼리 그룹으로 묶었을 때, 가장 개수가 많은 그룹의 크기를 반환하라
 
-        for (int i = 0; i < strArr.length; i++) {
+        // HashMap 을 사용해 각 길이별로 등장하는 횟수를 저장한다
+        // Key : 문자열의 길이, Value : 해당 문자열이 등장하는 횟수
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
 
-            int s = strArr[i].length();
+        for (String str : strArr) {
 
-            System.out.print("s : " + s + ", ");
+            int length = str.length();
 
-
+            hashMap.put(length, hashMap.getOrDefault(length, 0) + 1);
 
         }
 
         int answer = 0;
+
+        for (int v : hashMap.values()) {
+
+            answer = Math.max(answer, v);
+
+        }
 
         return answer;
     }
