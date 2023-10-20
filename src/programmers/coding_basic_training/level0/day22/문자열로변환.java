@@ -1,4 +1,4 @@
-package programmers.coding_basic_training.level0.practice;
+package programmers.coding_basic_training.level0.day22;
 
 public class 문자열로변환 {
 
