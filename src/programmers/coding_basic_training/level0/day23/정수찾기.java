@@ -1,26 +1,19 @@
-package programmers.coding_basic_training.level0.practice;
-
-import java.util.ArrayList;
-import java.util.List;
+package programmers.coding_basic_training.level0.day23;
 
 public class 정수찾기 {
 
     public int solution(int[] num_list, int n) {
 
-        List<Integer> list = new ArrayList<>();
+        // num_list 안에 n이 있으면 1을    없으면 0을 반환하라
 
         int answer = 0;
 
         for (int i = 0; i < num_list.length; i++) {
 
-            list.add(num_list[i]);
-
-            if (list.contains(n)) {
+            if (num_list[i] == n) {
 
                 answer = 1;
-            } else {
 
-                answer = 0;
             }
         }
 
