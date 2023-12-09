@@ -1,4 +1,4 @@
-package algorithms.programmers.coding_basic_introduction;
+package algorithms.programmers.coding_basic_introduction.day19;
 
 public class 머쓱이보다키큰사람 {
 

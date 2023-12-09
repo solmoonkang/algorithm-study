@@ -1,4 +1,4 @@
-package algorithms.programmers.coding_basic_introduction;
+package algorithms.programmers.coding_basic_introduction.day23;
 
 public class 옹알이1 {
 

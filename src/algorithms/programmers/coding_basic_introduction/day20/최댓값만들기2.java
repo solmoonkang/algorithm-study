@@ -1,4 +1,4 @@
-package algorithms.programmers.coding_basic_introduction;
+package algorithms.programmers.coding_basic_introduction.day20;
 
 import java.util.Arrays;
 
