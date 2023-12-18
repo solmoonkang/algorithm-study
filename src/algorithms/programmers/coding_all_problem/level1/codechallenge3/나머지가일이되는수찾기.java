@@ -1,4 +1,4 @@
-package algorithms.programmers.coding_all_problem.level1;
+package algorithms.programmers.coding_all_problem.level1.codechallenge3;
 
 public class 나머지가일이되는수찾기 {
 

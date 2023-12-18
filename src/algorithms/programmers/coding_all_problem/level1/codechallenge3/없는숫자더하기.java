@@ -1,4 +1,4 @@
-package algorithms.programmers.coding_all_problem.level1;
+package algorithms.programmers.coding_all_problem.level1.codechallenge3;
 
 public class 없는숫자더하기 {
 

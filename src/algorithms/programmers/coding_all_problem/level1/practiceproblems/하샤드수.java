@@ -1,4 +1,4 @@
-package algorithms.programmers.coding_all_problem.level1;
+package algorithms.programmers.coding_all_problem.level1.practiceproblems;
 
 public class 하샤드수 {
 

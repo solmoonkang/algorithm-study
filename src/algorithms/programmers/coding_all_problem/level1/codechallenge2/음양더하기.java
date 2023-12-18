@@ -1,4 +1,4 @@
-package algorithms.programmers.coding_all_problem.level1;
+package algorithms.programmers.coding_all_problem.level1.codechallenge2;
 
 public class 음양더하기 {
 

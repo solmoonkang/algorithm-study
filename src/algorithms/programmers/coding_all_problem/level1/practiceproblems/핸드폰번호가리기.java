@@ -1,6 +1,4 @@
-package algorithms.programmers.coding_all_problem.level1;
-
-import java.security.spec.RSAOtherPrimeInfo;
+package algorithms.programmers.coding_all_problem.level1.practiceproblems;
 
 public class 핸드폰번호가리기 {
 

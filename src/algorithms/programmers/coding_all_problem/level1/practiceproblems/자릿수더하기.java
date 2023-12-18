@@ -1,4 +1,4 @@
-package algorithms.programmers.coding_all_problem.level1;
+package algorithms.programmers.coding_all_problem.level1.practiceproblems;
 
 public class 자릿수더하기 {
 
