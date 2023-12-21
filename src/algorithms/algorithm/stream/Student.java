@@ -21,6 +21,10 @@ public class Student {
         return this.identity.equals(identity);
     }
 
+    public boolean isSameName(String name) {
+        return this.name.equals(name);
+    }
+
     public boolean isSameMajor(Major major) {
         return this.major.equals(major);
     }
