@@ -2,6 +2,7 @@ package algorithms.algorithm.stream;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 public class Students {
 
@@ -15,5 +16,11 @@ public class Students {
         return students.stream()
                 .filter(s -> s.isSameIdentity(identity))
                 .findFirst();
+    }
+
+    public List<Student> findStudentsByMajor(Major major) {
+        return students.stream()
+                .filter(s -> s.isSameMajor(major))
+                .collect(Collectors.toList());
     }
 }
