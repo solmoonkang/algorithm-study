@@ -1,6 +1,7 @@
 package algorithms.algorithm.stream;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -22,5 +23,10 @@ public class Students {
         return students.stream()
                 .filter(s -> s.isSameMajor(major))
                 .collect(Collectors.toList());
+    }
+
+    public Map<Integer, Long> countStudentsByGrade() {
+        return students.stream()
+                .collect(Collectors.groupingBy(Student::getGrade, Collectors.counting()));
     }
 }
