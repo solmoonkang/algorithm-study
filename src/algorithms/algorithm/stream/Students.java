@@ -25,7 +25,9 @@ public class Students {
                 .collect(Collectors.toList());
     }
 
-    public List<Student> findStudentsByMajor(Major major) {
+    public List<Student> findStudentsByMajor(String majorName) {
+        Major major = Major.findByMajorName(majorName);
+
         return students.stream()
                 .filter(s -> s.isSameMajor(major))
                 .collect(Collectors.toList());
