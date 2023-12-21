@@ -19,6 +19,12 @@ public class Students {
                 .findFirst();
     }
 
+    public List<Student> findStudentsByName(String name) {
+        return students.stream()
+                .filter(s -> s.isSameName(name))
+                .collect(Collectors.toList());
+    }
+
     public List<Student> findStudentsByMajor(Major major) {
         return students.stream()
                 .filter(s -> s.isSameMajor(major))
