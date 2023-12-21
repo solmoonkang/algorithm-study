@@ -24,4 +24,8 @@ public class Student {
     public boolean isSameMajor(Major major) {
         return this.major.equals(major);
     }
+
+    public int getGrade() {
+        return this.grade;
+    }
 }
