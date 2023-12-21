@@ -20,4 +20,8 @@ public class Student {
     public boolean isSameIdentity(Long identity) {
         return this.identity.equals(identity);
     }
+
+    public boolean isSameMajor(Major major) {
+        return this.major.equals(major);
+    }
 }
