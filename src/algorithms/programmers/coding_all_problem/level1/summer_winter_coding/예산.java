@@ -22,18 +22,15 @@ public class 예산 {
      * budget은 예산을 나타내며, 1 이상 10,000,000 이하의 자연수입니다.
      */
     public int solution(int[] d, int budget) {
-        // TODO: 문제 풀이 흐름이 이해되지 않았다.
-        int count = 0;
         Arrays.sort(d);
 
+        int count = 0;
         for (int i = 0; i < d.length; i++) {
-            if (budget >= d[i]) {
-                budget -= d[i];
-                count++;
-            } else {
-                break;
-            }
+            budget -= d[i];
+            if (budget < 0) break;
+            count++;
         }
+
         return count;
     }
 
