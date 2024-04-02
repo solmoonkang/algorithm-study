@@ -1,4 +1,4 @@
-package designpattern.observer;
+package observer;
 
 public class ObserverApplication {
 

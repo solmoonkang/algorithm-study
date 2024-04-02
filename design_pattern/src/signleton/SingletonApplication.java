@@ -1,4 +1,4 @@
-package designpattern.signleton;
+package signleton;
 
 public class SingletonApplication {
 

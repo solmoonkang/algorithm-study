@@ -1,4 +1,4 @@
-package designpattern.factory;
+package factory;
 
 public abstract class Coffee {
 

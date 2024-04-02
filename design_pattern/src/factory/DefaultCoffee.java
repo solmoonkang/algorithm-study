@@ -1,4 +1,4 @@
-package designpattern.factory;
+package factory;
 
 public class DefaultCoffee extends Coffee {
 
