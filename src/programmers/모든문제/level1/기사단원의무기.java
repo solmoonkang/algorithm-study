@@ -31,10 +31,39 @@ public class 기사단원의무기 {
         return answer;
     }
 
+    public int solution2(int number, int limit, int power) {
+        // 각 숫자에 대한 약수의 개수를 구하는 과정을 최적화
+        int[] divisors = new int[number];
+
+        for (int i = 1; i <= number; i++) {
+            int count = 0;
+            int sqrt = (int) Math.sqrt(i);
+            for (int j = 1; j <= sqrt; j++) {
+                if (i % j == 0) {
+                    if (i / j == j) count++;
+                    else count += 2;
+                }
+            }
+
+            divisors[i - 1] = count;
+        }
+
+        int answer = 0;
+        for (int i = 0; i < divisors.length; i++) {
+            if (divisors[i] > limit) {
+                answer += power;
+            } else {
+                answer += divisors[i];
+            }
+        }
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         기사단원의무기 knightWeapon = new 기사단원의무기();
 
-        System.out.println("knightWeapon = " + knightWeapon.solution(5, 3, 2));
-        System.out.println("knightWeapon = " + knightWeapon.solution(10, 3, 2));
+        System.out.println("knightWeapon = " + knightWeapon.solution2(5, 3, 2));
+        System.out.println("knightWeapon = " + knightWeapon.solution2(10, 3, 2));
     }
 }
