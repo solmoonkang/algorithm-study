@@ -1,4 +1,4 @@
-package programmers.기출문제.pcce기출문제;
+package programmers.모든문제.level0.pcce;
 
 import java.util.Arrays;
 
