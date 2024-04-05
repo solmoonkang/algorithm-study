@@ -2,54 +2,39 @@ package programmers.모든문제.level2;
 
 public class 피보나치수 {
 
-    /** Solution
-     *  풀긴 했는데 Runtime Error 발생, 더 효율적인 방법을 찾아보자
-     */
-
     public int solution(int n) {
-
-        // 재귀함수로 풀어야하나...?
-
-        // 피보나치 수는 F(n) = F(n - 1) + F(n - 2)가 적용되는 수이다
-        // 2 이상의 N이 입력되었을 때, N번째 피보나치 수를 1234567로 나눈 나머지를 반환하라
-
-        int answer = 0;
-
-        if (n >= 2) {
-
-            answer = fibonacci(n) % 1234567;
-
-        }
-
-        return answer;
+        // 시간 초과 발생: 피보나치 수를 재귀 함수로 계산하는 과정에서 발생
+        return fibo(n) % 1234567;
     }
 
-    private int fibonacci(int n) {
-
-        int sum = 0;
-
-        if (n > 1) {
-
-            sum = fibonacci(n - 1) + fibonacci(n - 2);
-
-        } else if (n == 1) {
-
-            sum = 1;
-
-        } else if (n == 0) {
-
-            sum = 0;
-
-        }
-
-        return sum;
+    private int fibo(int number) {
+        if (number < 1) return 0;
+        if (number < 2) return 1;
+        return fibo(number - 1) + fibo(number - 2);
     }
+
+    public int refactor(int n) {
+        // 시간 초과 해결을 위해 중복 계산을 피하는 방법을 적용
+        // 다이나믹 프로그래밍을 통해 바텀업 접근 방식으로 해결
+        long[] fibo = new long[n + 1];
+
+        fibo[0] = 0;
+        fibo[1] = 1;
+
+        for (int i = 2; i <= n; i++) {
+            fibo[i] = (fibo[i - 1] + fibo[i - 2]) % 1234567;
+        }
+        return (int) (fibo[n] % 1234567);
+    }
+
 
     public static void main(String[] args) {
-
         피보나치수 fibonacci = new 피보나치수();
 
-        System.out.println("Result : " + fibonacci.solution(3));
-        System.out.println("Result : " + fibonacci.solution(5));
+        System.out.println("fibonacci = " + fibonacci.solution(3));
+        System.out.println("fibonacci = " + fibonacci.solution(5));
+
+        System.out.println("fibonacci = " + fibonacci.refactor(3));
+        System.out.println("fibonacci = " + fibonacci.refactor(5));
     }
 }
