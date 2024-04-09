@@ -1,4 +1,4 @@
-package algorithms.programmers.coding_all_problem.level1.practice_problems;
+package programmers.모든문제.level1;
 
 public class 수박수박수박수박수박수 {
 
