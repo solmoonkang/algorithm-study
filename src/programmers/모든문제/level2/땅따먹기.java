@@ -49,7 +49,28 @@ public class 땅따먹기 {
         return answer;
     }
 
+    public int solutionDynamicProgramming(int[][] land) {
+        // TODO: DP 알고리즘을 활용해서 구현했음. 아직 알고리즘에 대한 공부가 빈약함. 다시 한 번 풀어보자.
+        for (int i = 1; i < land.length; i++) {
+            for (int j = 0; j < land[0].length; j++) {
+                int max = 0;
 
+                for (int k = 0; k < land[0].length; k++) {
+                    if (j != k) {
+                        max = Math.max(max, land[i - 1][k]);
+                    }
+                }
+                land[i][j] += max;
+            }
+        }
+
+        int answer = 0;
+        for (int i = 0; i < land[0].length; i++) {
+            answer = Math.max(answer, land[land.length - 1][i]);
+        }
+
+        return answer;
+    }
 
     public static void main(String[] args) {
         땅따먹기 landGrab = new 땅따먹기();
@@ -60,5 +81,7 @@ public class 땅따먹기 {
                 {4, 3, 2, 1}
         };
         System.out.println("landGrab = " + landGrab.solution(land));
+
+        System.out.println("landGrab = " + landGrab.solutionDynamicProgramming(land));
     }
 }
