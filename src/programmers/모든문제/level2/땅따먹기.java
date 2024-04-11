@@ -64,12 +64,16 @@ public class 땅따먹기 {
             }
         }
 
-        int answer = 0;
-        for (int i = 0; i < land[0].length; i++) {
-            answer = Math.max(answer, land[land.length - 1][i]);
-        }
+//        int answer = 0;
+//        for (int i = 0; i < land[0].length; i++) {
+//            answer = Math.max(answer, land[land.length - 1][i]);
+//        }
+//
+//        return answer;
 
-        return answer;
+        return Arrays.stream(land[land.length - 1])
+                .max()
+                .getAsInt();
     }
 
     public static void main(String[] args) {
