@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.exhaustive;
+package programmers.알고리즘고득점KIT.완전탐색;
 
 public class 최소직사각형 {
 

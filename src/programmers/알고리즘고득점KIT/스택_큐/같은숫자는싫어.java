@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.queue;
+package programmers.알고리즘고득점KIT.스택_큐;
 
 import java.util.*;
 

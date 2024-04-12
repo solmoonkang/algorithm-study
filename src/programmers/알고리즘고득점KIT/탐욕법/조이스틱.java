@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.greedy;
+package programmers.알고리즘고득점KIT.탐욕법;
 
 public class 조이스틱 {     // 문제 자체가 이해되지 않음
 

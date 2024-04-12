@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.dfs;
+package programmers.알고리즘고득점KIT.깊이_너비우선탐색;
 
 public class 타겟넘버 {
 

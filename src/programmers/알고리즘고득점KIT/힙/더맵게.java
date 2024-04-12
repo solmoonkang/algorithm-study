@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.heap;
+package programmers.알고리즘고득점KIT.힙;
 
 import java.util.PriorityQueue;
 

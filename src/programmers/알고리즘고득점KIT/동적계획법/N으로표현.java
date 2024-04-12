@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.dynamic;
+package programmers.알고리즘고득점KIT.동적계획법;
 
 public class N으로표현 {
 

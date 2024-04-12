@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.hash;
+package programmers.알고리즘고득점KIT.해시;
 
 import java.util.Arrays;
 import java.util.HashSet;

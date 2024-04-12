@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.greedy;
+package programmers.알고리즘고득점KIT.탐욕법;
 
 import java.util.Arrays;
 import java.util.Deque;

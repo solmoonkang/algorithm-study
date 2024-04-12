@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.exhaustive;
+package programmers.알고리즘고득점KIT.완전탐색;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package programmers.알고리즘고득점KIT.sort;
+package programmers.알고리즘고득점KIT.정렬;
 
 import java.util.ArrayList;
 import java.util.Arrays;
