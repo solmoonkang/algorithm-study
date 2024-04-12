@@ -21,17 +21,26 @@ public class 스티커모으기2 {
      * 원형의 스티커 모양을 위해 sticker 배열의 첫 번째 원소와 마지막 원소가 서로 연결되어있다고 간주합니다.
      */
     public int solution(int[] sticker) {
-        // 덱을 사용해서 원형이 될 수 있도록 해야 함.
-        // 스티커를 뜯으면 주변도 같이 뜯어져 나감.
-        // 동적 계획법과 덱을 이용해서 풀 수 있을거 같음.
-        // 그렇게 스티커를 뜯어 얻을 수 있는 숫자의 최대 합을 구해야 함.
+        // TODO: 배열의 인덱스를 줄 때, 값이 어떻게 할당되는지를 정확히 이해하지 못함. 다시 한 번 풀어보자.
+        int N = sticker.length;
+        if (N == 1) return sticker[0];
 
-        int answer = 0;
-        for (int i = 1; i < sticker.length; i += 2) {
-            answer += sticker[i];
+        return Math.max(findMax(sticker, 0, N - 2), findMax(sticker, 1, N - 1));
+    }
+
+    // 동적 계획법을 사용하여, 각 위치의 스티커를 뜯을 때와 뜯지 않을 때의 최대 합을 계산한다.
+    private int findMax(int[] sticker, int start, int end) {
+        int N = end - start + 1;
+        int[] dp = new int[N];
+
+        dp[0] = sticker[start];
+        dp[1] = Math.max(sticker[start], sticker[start + 1]);
+
+        for (int i = 2; i < N; i++) {
+            dp[i] = Math.max(dp[i - 1], dp[i - 2] + sticker[start + i]);
         }
 
-        return answer;
+        return dp[N - 1];
     }
 
     public static void main(String[] args) {
