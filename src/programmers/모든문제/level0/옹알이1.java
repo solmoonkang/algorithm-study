@@ -19,27 +19,23 @@ public class 옹알이1 {
      * 문자열은 알파벳 소문자로만 이루어져 있습니다.
      */
     public int solution(String[] babbling) {
-        // TODO: substring의 활용을 잘 못하고 있음. 방식만 이해하면 금방 풀 수 있을거 같음.
-
-    }
-
-    public int solutionGpt(String[] babbling) {
-        // 다른 사람이 푼 코드
+        // TODO: 다른 사람 풀이를 보고 다시 풀어보자.
         int count = 0;
+        String[] sounds = {"aya", "ye", "woo", "ma"};
 
         for (String word : babbling) {
-            String tempWord = word;
-            tempWord = tempWord.replace("aya", "A").replace("ye", "Y").replace("woo", "W").replace("ma", "M");
+            String current = word;
 
-            boolean isValid = true;
-            for (int i = 0; i < tempWord.length() - 1; i++) {
-                if (tempWord.charAt(i) == tempWord.charAt(i + 1)) {
-                    isValid = false;
-                    break;
+            for (String sound : sounds) {
+                if (current.contains(sound)) {
+                    current = current.replaceFirst(sound, "");      // 첫 번째로 발견된 발음을 제거한다.
                 }
             }
 
-            if (isValid) count++;
+            // 모든 발음을 제거한 후 남은 문자열이 비어있는지, 그리고 제거 전후 길이 차이가 발음의 총 길이와 같은지 확인한다.
+            if (current.isEmpty() && word.length() - current.length() == 8) {
+                count++;
+            }
         }
 
         return count;
