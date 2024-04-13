@@ -1,4 +1,4 @@
-package 연습문제풀이.algorithm.탐색.exhaustive;
+package 연습문제풀이.알고리즘.완전이진탐색;
 
 import java.util.stream.IntStream;
 

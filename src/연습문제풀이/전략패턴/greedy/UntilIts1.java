@@ -1,4 +1,4 @@
-package 연습문제풀이.patterns.전략패턴.greedy;
+package 연습문제풀이.전략패턴.greedy;
 
 import java.util.Scanner;
 

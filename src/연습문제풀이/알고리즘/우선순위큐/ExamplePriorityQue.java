@@ -1,4 +1,4 @@
-package 연습문제풀이.algorithm.힙;
+package 연습문제풀이.알고리즘.우선순위큐;
 
 import java.util.*;
 

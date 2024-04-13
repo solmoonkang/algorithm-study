@@ -1,4 +1,4 @@
-package 연습문제풀이.algorithm.탐색.dfs;
+package 연습문제풀이.알고리즘.깊이우선탐색;
 
 import java.util.Stack;
 

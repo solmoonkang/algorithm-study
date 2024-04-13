@@ -1,4 +1,4 @@
-package 연습문제풀이.algorithm.정렬알고리즘종류;
+package 연습문제풀이.알고리즘.정렬알고리즘종류;
 
 import java.util.Arrays;
 
