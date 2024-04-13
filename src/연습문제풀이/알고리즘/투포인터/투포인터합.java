@@ -1,7 +1,5 @@
 package 연습문제풀이.알고리즘.투포인터;
 
-import java.util.Arrays;
-
 public class 투포인터합 {
 
     /**
