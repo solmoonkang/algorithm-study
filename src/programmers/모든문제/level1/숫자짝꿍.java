@@ -1,4 +1,4 @@
-package programmers.모든문제.level2;
+package programmers.모든문제.level1;
 
 import java.util.HashMap;
 import java.util.Map;
