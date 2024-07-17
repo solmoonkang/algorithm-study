@@ -106,13 +106,38 @@ public class 푸드파이트대회 {
         return count;
     }
 
+
+
+    /**
+     * 준비된 음식은 짝수로만 섭취가 가능함
+     * 대회 음식을 배치할 경우, 중간에는 0이 들어가고 그 이외에는 거꾸로 뒤집은 상태가 되어야 함
+     *
+     * 예를 들어, 1, 3, 4, 6 이면, 0번 음식 1개, 1번 음식 3개, 2번 음식 4개, 3번 음식 6개
+     * 결과는 1223330333221
+     */
+    public String solution3(int[] food) {
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 1; i < food.length; i++) {
+            for (int j = 0; j < food[i] / 2; j++) {
+                builder.append(i);
+            }
+        }
+        builder.append("0");
+
+        StringBuilder reverse = new StringBuilder(builder).reverse();
+        builder.append(reverse);
+
+        return builder.toString();
+    }
+
     public static void main(String[] args) {
         푸드파이트대회 foodFighter = new 푸드파이트대회();
 
         int[] firstFood = {1, 3, 4, 6};
-        System.out.println("foodFighter = " + foodFighter.solution2(firstFood));
+        System.out.println("foodFighter = " + foodFighter.solution3(firstFood));
 
         int[] secondFood = {1, 7, 1, 2};
-        System.out.println("foodFighter = " + foodFighter.solution2(secondFood));
+        System.out.println("foodFighter = " + foodFighter.solution3(secondFood));
     }
 }
