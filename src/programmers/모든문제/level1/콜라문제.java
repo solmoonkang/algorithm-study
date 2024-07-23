@@ -32,7 +32,7 @@ public class 콜라문제 {
      * 1 ≤ b < a ≤ n ≤ 1,000,000
      * 정답은 항상 int 범위를 넘지 않게 주어집니다.
      */
-    public int solution(int a, int b, int n) {
+    public int solution1(int a, int b, int n) {
         // TODO: 다시 한 번 풀어보자.
         // 새로운 콜라를 얻기 위해 필요한 병 수 = a
         // 빈 병을 교환할 때 받게 되는 콜라 병 수 = b
@@ -56,10 +56,25 @@ public class 콜라문제 {
         return totalCola;
     }
 
+    public int solution2(int a, int b, int n) {
+        int totalCoke = 0;
+
+        while (n >= a) {
+            int newCoke = n / a;
+            totalCoke += newCoke;
+            n = (newCoke * b) + (n % a);
+        }
+
+        return totalCoke;
+    }
+
     public static void main(String[] args) {
         콜라문제 problemCola = new 콜라문제();
 
-        System.out.println("problemCoke = " + problemCola.solution(2, 1, 20));
-        System.out.println("problemCoke = " + problemCola.solution(3, 1, 20));
+        System.out.println("problemCoke = " + problemCola.solution1(2, 1, 20));
+        System.out.println("problemCoke = " + problemCola.solution1(3, 1, 20));
+
+        System.out.println("problemCoke = " + problemCola.solution2(2, 1, 20));
+        System.out.println("problemCoke = " + problemCola.solution2(3, 1, 20));
     }
 }
