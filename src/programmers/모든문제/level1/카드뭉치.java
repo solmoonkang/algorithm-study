@@ -1,9 +1,5 @@
 package programmers.모든문제.level1;
 
-import java.util.Arrays;
-import java.util.Deque;
-import java.util.LinkedList;
-
 public class 카드뭉치 {
 
     /**
@@ -44,7 +40,7 @@ public class 카드뭉치 {
      * 만약 goal의 현재 단어를 두 카드 뭉치의 현재 포인터 위치 이후에서 찾을 수 있다면, 해당 카드 뭉치의 포인터를 찾은 단어의 위치 이후로 이동시킵니다.
      * goal의 모든 단어를 순서대로 찾을 수 있다면 "Yes"를, 그렇지 않다면 "No"를 반환합니다.
      */
-    public String solution(String[] cards1, String[] cards2, String[] goal) {
+    public String solution1(String[] cards1, String[] cards2, String[] goal) {
         // TODO: 배열 활용이 여전히 미숙함. 다시 한 번 풀어보자.
         int cards1Pointer = 0;
         int cards2Pointer = 0;
@@ -58,17 +54,32 @@ public class 카드뭉치 {
         return "Yes";
     }
 
+    public String solution2(String[] cards1, String[] cards2, String[] goal) {
+        int index1 = 0;
+        int index2 = 0;
+
+        for (int i = 0; i < goal.length; i++) {
+            if (index1 < cards1.length && goal[i].equals(cards1[index1])) index1++;
+            else if (index2 < cards2.length && goal[i].equals(cards2[index2])) index2++;
+            else return "No";
+        }
+
+        return "Yes";
+    }
+
     public static void main(String[] args) {
         카드뭉치 stackOfCards = new 카드뭉치();
 
         String[] firstCards1 = {"i", "drink", "water"};
         String[] firstCards2 = {"want", "to"};
         String[] firstGoal = {"i", "want", "to", "drink", "water"};
-        System.out.println("stackOfCards = " + stackOfCards.solution(firstCards1, firstCards2, firstGoal));
+        System.out.println("stackOfCards = " + stackOfCards.solution1(firstCards1, firstCards2, firstGoal));
+        System.out.println("stackOfCards = " + stackOfCards.solution2(firstCards1, firstCards2, firstGoal));
 
         String[] secondCards1 = {"i", "water", "drink"};
         String[] secondCards2 = {"want", "to"};
         String[] secondGoal = {"i", "want", "to", "drink", "water"};
-        System.out.println("stackOfCards = " + stackOfCards.solution(secondCards1, secondCards2, secondGoal));
+        System.out.println("stackOfCards = " + stackOfCards.solution1(secondCards1, secondCards2, secondGoal));
+        System.out.println("stackOfCards = " + stackOfCards.solution2(secondCards1, secondCards2, secondGoal));
     }
 }
