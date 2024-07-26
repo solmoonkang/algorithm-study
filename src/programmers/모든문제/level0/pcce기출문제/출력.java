@@ -1,4 +1,4 @@
-package programmers.모든문제.level0.pcce;
+package programmers.모든문제.level0.pcce기출문제;
 
 public class 출력 {
 
