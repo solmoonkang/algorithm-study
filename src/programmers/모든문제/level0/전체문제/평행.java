@@ -1,4 +1,4 @@
-package programmers.모든문제.level0;
+package programmers.모든문제.level0.전체문제;
 
 import java.util.Arrays;
 import java.util.HashSet;

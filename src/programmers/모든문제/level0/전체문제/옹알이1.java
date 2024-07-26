@@ -1,4 +1,4 @@
-package programmers.모든문제.level0;
+package programmers.모든문제.level0.전체문제;
 
 public class 옹알이1 {
 
