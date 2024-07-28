@@ -1,4 +1,4 @@
-package programmers.기출문제.pcce기출문제;
+package programmers.기출문제.PCCE기출문제;
 
 public class 창고정리 {
 
