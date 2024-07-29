@@ -1,6 +1,8 @@
 package programmers.모든문제.level1.전체문제;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class 가장가까운같은글자 {
 
@@ -47,7 +49,7 @@ public class 가장가까운같은글자 {
      *
      * 4. 결과 반환: 모든 문자를 처리한 후, result 배열을 반환합니다.
      */
-    public int[] solution(String s) {
+    public int[] solution1(String s) {
         // TODO: 코드 자체를 이해하지 못함.
         int[] answer = new int[s.length()];
         int[] lastSeen = new int[26];
@@ -68,11 +70,31 @@ public class 가장가까운같은글자 {
         return answer;
     }
 
+    public int[] solution2(String s) {
+        Map<Character, Integer> lastSeen = new HashMap<>();
+        int[] answer = new int[s.length()];
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (lastSeen.containsKey(c)) {
+                answer[i] = i - lastSeen.get(c);
+            } else {
+                answer[i] = -1;
+            }
+
+            lastSeen.put(c, i);
+        }
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         가장가까운같은글자 nearestRepeatingCharacter = new 가장가까운같은글자();
 
-        System.out.println("nearestCharacter = " + Arrays.toString(nearestRepeatingCharacter.solution("banana")));
+        String s1 = "banana";
+        System.out.println("nearestCharacter = " + Arrays.toString(nearestRepeatingCharacter.solution2(s1)));
 
-        System.out.println("nearestCharacter = " + Arrays.toString(nearestRepeatingCharacter.solution("foobar")));
+        String s2 = "foobar";
+        System.out.println("nearestCharacter = " + Arrays.toString(nearestRepeatingCharacter.solution2(s2)));
     }
 }
