@@ -29,13 +29,41 @@ public class 문자열내마음대로정렬하기 {
         return strings;
     }
 
+    /**
+     * 1. Arrays.sort():
+     *      주어진 배열을 정렬한다.
+     *      두 번째 매개변수로는 비교기를 제공하여 정렬 기준을 정의할 수 있다.
+     *      여기서 람다식을 사용하여 s1과 s2라는 두 개의 문자열을 비교하도록 설정한다.
+     * 2. (s1, s2) -> {...}:
+     *      Comparator<String> 인터페이스를 구현하는 람다식으로, 두 개의 문자열 s1과 s2를 입력으로 받아 비교하여 정렬 순서를 결정한다.
+     * 3. s1.charAt(n) != s2.charAt(n):
+     *      두 문자열의 n번째 문자를 비교한다.
+     *      만약, 두 문자가 다르다면, Character.compare(s1.charAt(n), s2.charAt(n))를 호출하여 해당 문자의 아스키 값을 비교한다.
+     *      Character.compare()는 두 문자를 비교하여, 첫 번째 문자가 두 번째 문자보다 작으면 음수, 같으면 0, 크면 양수를 반환한다.
+     * 4. return s1.compareTo(s2):
+     *      만약, n번쨰 문자가 동일하면, s1.compareTo(s2)를 호출하여 두 문자열을 사전식으로 비교한다.
+     *      compareTo 메서드는 두 문자열을 비교하여 사전적 순서를 반환한다.
+     *      만약, s1이 s2보다 사전적으로 앞서면 음수, 같으면 0, 뒤면 양수를 반환한다.
+     */
+
+    public String[] solution2(String[] strings, int n) {
+        Arrays.sort(strings, (s1, s2) -> {
+            if (s1.charAt(n) != s2.charAt(n))
+                return Character.compare(s1.charAt(n), s2.charAt(n));
+            else
+                return s1.compareTo(s2);
+        });
+
+        return strings;
+    }
+
     public static void main(String[] args) {
         문자열내마음대로정렬하기 customOrder = new 문자열내마음대로정렬하기();
 
         String[] firstStrings = {"sun", "bed", "car"};
-        System.out.println("customOrder = " + Arrays.toString(customOrder.solution(firstStrings, 1)));
+        System.out.println("customOrder = " + Arrays.toString(customOrder.solution2(firstStrings, 1)));
 
         String[] secondStrings = {"abce", "abcd", "cdx"};
-        System.out.println("customOrder = " + Arrays.toString(customOrder.solution(secondStrings, 2)));
+        System.out.println("customOrder = " + Arrays.toString(customOrder.solution2(secondStrings, 2)));
     }
 }
