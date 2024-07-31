@@ -54,13 +54,45 @@ public class 시저암호 {
         return builder.toString();
     }
 
+
+    /**
+     * 1. alphabet - 'A':
+     *      현재 문자를 'A'의 아스키 코드 값으로부터 얼마나 떨어져 있는지를 계산한다.
+     *      예를 들어, 'C'는 67이고, 'A'는 65이므로, alphabet - 'A'는 2가 된다.
+     *      이는 문자 'A'부터 시작하는 0부터 25까지의 인덱스 값을 얻을 수 있다.
+     * 2. + n:
+     *      위의 계산에서 얻은 인덱스에 n을 더하여 이동할 위치를 계산한다.
+     * 3. % 26:
+     *      알파벳은 26자로 구성되어 있어, + n을 했을 때 26을 넘을 수도 있다.
+     *      이 경우, % 26을 사용해서 0부터 25까지의 범위로 다시 되돌리기 위함이다.
+     *      예를 들어, 'Z'에서 2를 더하면 26이 되는데, 이 경우 % 26을 통해 0으로 돌아가 'A'가 된다.
+     * 4. + 'A':
+     *      0부터 25까지의 인덱스 값을 다시 아스키 문자로 변환하기 위해 'A'를 더해준다.
+     *      예를 들어, 인덱스 4는 'E'를 나타내므로, 4에서 'A'의 아스키 코드 65를 더하면 69가 되고, 이는 'E'가 된다.
+     */
+
+    public String solution2(String s, int n) {
+        StringBuilder builder = new StringBuilder();
+
+        for (char alphabet : s.toCharArray()) {
+            if (Character.isUpperCase(alphabet)) {
+                alphabet = (char) ((alphabet - 'A' + n) % 26 + 'A');
+            }
+            else if (Character.isLowerCase(alphabet)) {
+                alphabet = (char) ((alphabet - 'a' + n) % 26 + 'a');
+            }
+
+            builder.append(alphabet);
+        }
+
+        return builder.toString();
+    }
+
     public static void main(String[] args) {
         시저암호 caesarCipher = new 시저암호();
 
-        System.out.println("caesarCipher = " + caesarCipher.solution("AB", 1));
-
-        System.out.println("caesarCipher = " + caesarCipher.solution("z", 1));
-
-        System.out.println("caesarCipher = " + caesarCipher.solution("a B z", 4));
+        System.out.println("caesarCipher = " + caesarCipher.solution2("AB", 1));
+        System.out.println("caesarCipher = " + caesarCipher.solution2("z", 1));
+        System.out.println("caesarCipher = " + caesarCipher.solution2("a B z", 4));
     }
 }
