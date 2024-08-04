@@ -1,6 +1,7 @@
 package programmers.모든문제.level1.전체문제;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class 과일장수 {
 
@@ -31,13 +32,32 @@ public class 과일장수 {
         return answer;
     }
 
+    /**
+     * 1. 사과 점수 정렬: 주어진 사과 점수를 내림차순으로 정렬합니다. 이렇게 하면 높은 점수의 사과를 먼저 고려할 수 있습니다.
+     * 2. 상자 포장 단위 계산: 사과를 m개씩 포장해야 하므로, 전체 사과 수를 m으로 나누어 몇 개의 상자를 만들 수 있는지 계산합니다. 이때 남는 사과는 버리게 됩니다.
+     * 3. 상자당 최저 점수 찾기: 각 상자에 담길 사과들 중 최저 점수를 찾아야 합니다. 정렬된 리스트에서 m개씩 묶어가며 가장 낮은 점수를 확인합니다.
+     * 4. 이익 계산하기: 각 상자에 대해 계산한 최저 점수를 사용하여 이익을 계산합니다. 이익은 (최저 점수) x (m) x (상자의 수)로 계산됩니다.
+     * 5. 최대 이익 반환: 모든 상자에 대해 계산한 이익을 합산하여 최대 이익을 반환합니다.
+     */
+
+    public int solution2(int k, int m, int[] score) {
+        int answer = 0;
+        Arrays.sort(score);
+
+        for (int i = score.length; i >= m; i -=m) {
+            answer += score[i -m] * m;
+        }
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         과일장수 fruitVendor = new 과일장수();
 
         int[] firstScore = {1, 2, 3, 1, 2, 3, 1};
-        System.out.println("fruitVendor = " + fruitVendor.solution(3, 4, firstScore));
+        System.out.println("fruitVendor = " + fruitVendor.solution2(3, 4, firstScore));
 
         int[] secondScore = {4, 1, 2, 2, 4, 4, 4, 4, 1, 2, 4, 2};
-        System.out.println("fruitVendor = " + fruitVendor.solution(4, 3, secondScore));
+        System.out.println("fruitVendor = " + fruitVendor.solution2(4, 3, secondScore));
     }
 }
