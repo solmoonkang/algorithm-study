@@ -1,8 +1,6 @@
-package programmers.모든문제.level2;
+package programmers.모든문제.level2.전체문제;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class 땅따먹기 {
 

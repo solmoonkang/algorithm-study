@@ -1,4 +1,4 @@
-package programmers.모든문제.level2;
+package programmers.모든문제.level2.전체문제;
 
 public class 멀리뛰기 {
 
