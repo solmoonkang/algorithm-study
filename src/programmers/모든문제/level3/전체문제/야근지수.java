@@ -1,4 +1,4 @@
-package programmers.모든문제.level3;
+package programmers.모든문제.level3.전체문제;
 
 import java.util.PriorityQueue;
 

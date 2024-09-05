@@ -1,7 +1,4 @@
-package programmers.모든문제.level3;
-
-import java.util.ArrayList;
-import java.util.List;
+package programmers.모든문제.level3.전체문제;
 
 public class 기지국설치 {
 
