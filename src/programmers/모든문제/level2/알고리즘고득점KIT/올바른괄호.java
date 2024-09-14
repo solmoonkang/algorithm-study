@@ -1,4 +1,4 @@
-package programmers.모든문제.level1.알고리즘고득점KIT;
+package programmers.모든문제.level2.알고리즘고득점KIT;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
