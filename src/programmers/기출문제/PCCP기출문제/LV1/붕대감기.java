@@ -1,6 +1,6 @@
-package programmers.기출문제.PCCP기출문제;
+package programmers.기출문제.PCCP기출문제.LV1;
 
-public class PCCP기출문제_붕대감기 {
+public class 붕대감기 {
 
     public int solution(int[] bandage, int health, int[][] attacks) {
         int currentHealth = health;     // 현재 캐릭터 체력
@@ -46,7 +46,7 @@ public class PCCP기출문제_붕대감기 {
     }
 
     public static void main(String[] args) {
-        PCCP기출문제_붕대감기 bandaging = new PCCP기출문제_붕대감기();
+        붕대감기 bandaging = new 붕대감기();
 
         int[] bandage1 = {5, 1, 5};
         int health1 = 30;
