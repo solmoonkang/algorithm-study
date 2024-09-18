@@ -1,4 +1,4 @@
-package programmers.기출문제.PCCE기출문제;
+package programmers.기출문제.PCCE기출문제.LV1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
