@@ -1,4 +1,4 @@
-package baekjoon.반복문;
+package baekjoon.단계문제.반복문;
 
 public class 구구단 {
 

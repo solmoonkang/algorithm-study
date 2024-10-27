@@ -1,4 +1,4 @@
-package baekjoon.tree;
+package baekjoon.단계문제.트리;
 
 public class 트리순회 {
 
