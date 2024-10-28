@@ -3,7 +3,7 @@ package baekjoon.단계문제.반복문;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class A더하기B {
+public class A더하기B_3 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
