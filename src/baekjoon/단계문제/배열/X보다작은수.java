@@ -1,7 +1,6 @@
 package baekjoon.단계문제.배열;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class X보다작은수 {
