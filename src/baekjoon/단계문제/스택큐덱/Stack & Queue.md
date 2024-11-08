@@ -77,3 +77,6 @@
 
 - 큐의 가장 처음(맨 아래)에 저장된 객체를 반환한다.
 - 만약, 큐가 비었다면 NULL을 반환한다.
+
+## 참고 자료
+- [[Java/자바] 스택(Stack)과 큐(Queue)](https://hstory0208.tistory.com/entry/Java%EC%9E%90%EB%B0%94-%EC%8A%A4%ED%83%9DStack%EA%B3%BC-%ED%81%90Queue)
