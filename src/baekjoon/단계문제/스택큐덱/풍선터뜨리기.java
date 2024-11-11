@@ -1,12 +1,11 @@
 package baekjoon.단계문제.스택큐덱;
 
 import java.io.*;
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class 풍선터뜨리기 {
 
+    // TODO: 제시한 입력값에 따른 결과값은 맞지만 백준에서는 틀렸음. 코드를 수정해야 함.
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -14,30 +13,37 @@ public class 풍선터뜨리기 {
         int N = Integer.parseInt(bufferedReader.readLine());
 
         Deque<Integer> balloonDeque = new ArrayDeque<>();
-        int[] values = new int[N];
+        int[] balloonLocation = new int[N];
         StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
 
         for (int i = 0; i < N; i++) {
             balloonDeque.offerLast(i + 1);
-            values[i] = Integer.parseInt(stringTokenizer.nextToken());
+            balloonLocation[i] = Integer.parseInt(stringTokenizer.nextToken());
         }
 
         StringBuilder builder = new StringBuilder();
+        builder.append("1 ");
+        balloonDeque.pollFirst();
 
-        int currentIndex = 0;
+        int currentIndex = balloonLocation[0];
 
         while (!balloonDeque.isEmpty()) {
-            int balloonNumber = balloonDeque.pollFirst();
-            builder.append(balloonNumber).append(" ");
+            if (currentIndex > 0) {
+                for (int i = 0; i < currentIndex - 1; i++) {
+                    balloonDeque.offerLast(balloonDeque.pollFirst());
+                }
 
-            int move = values[balloonNumber - 1];
-            if (balloonDeque.isEmpty()) break;
+                int nextIndex = balloonDeque.pollFirst();
+                currentIndex = balloonLocation[nextIndex - 1];
+                builder.append(nextIndex).append(" ");
+            } else {
+                for (int i = 0; i < -currentIndex; i++) {
+                    balloonDeque.offerFirst(balloonDeque.pollLast());
+                }
 
-            if (move > 0) currentIndex = (move - 1) % balloonDeque.size();
-            else currentIndex = (balloonDeque.size() + move) % balloonDeque.size();
-
-            for (int i = 0; i < currentIndex; i++) {
-                balloonDeque.offerLast(balloonDeque.pollFirst());
+                int nextIndex = balloonDeque.pollLast();
+                currentIndex = balloonLocation[nextIndex - 1];
+                builder.append(nextIndex).append(" ");
             }
         }
 
