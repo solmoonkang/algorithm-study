@@ -14,26 +14,33 @@ public class 피보나치수열 {
      * 입력
      * 5
      * 10
-     *
+     * <p>
      * 출력
      * 5
      * 55
      */
+
+    static int[] dynamic;
 
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int N = Integer.parseInt(bufferedReader.readLine());
-        int fibonacci = getFibonacciTabulated(N);
 
-        bufferedWriter.write(fibonacci + "\n");
+        int fibonacciTabulation = getFibonacciTabulation(N);
+        bufferedWriter.write("Tabulation = " + fibonacciTabulation + "\n");
+
+        dynamic = new int[N + 1];
+        int fibonacciMemoization = getFibonacciMemoization(N);
+        bufferedWriter.write("Memoization = " + fibonacciMemoization);
+
         bufferedWriter.flush();
         bufferedWriter.close();
         bufferedReader.close();
     }
 
-    public static int getFibonacciTabulated(int number) {
+    public static int getFibonacciTabulation(int number) {
         int[] dynamicArray = new int[number + 1];
         dynamicArray[0] = 0;
         dynamicArray[1] = 1;
@@ -43,5 +50,15 @@ public class 피보나치수열 {
         }
 
         return dynamicArray[number];
+    }
+
+    public static int getFibonacciMemoization(int number) {
+        if (number == 0) return 0;
+        if (number == 1) return 1;
+
+        if (dynamic[number] != 0) return dynamic[number];
+
+        dynamic[number] = getFibonacciMemoization(number - 1) + getFibonacciMemoization(number - 2);
+        return dynamic[number];
     }
 }
