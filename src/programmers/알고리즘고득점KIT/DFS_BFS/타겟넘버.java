@@ -2,40 +2,30 @@ package programmers.알고리즘고득점KIT.DFS_BFS;
 
 public class 타겟넘버 {
 
+    private int count = 0;
+
     public int solution(int[] numbers, int target) {
-
-        // n개의 음이 아닌 정수들이 있는데, 해당 정수들의 순서를 바꾸지 않고, 적절히 더하거나 빼서 타겟 넘버를 만들려고 한다
-
-        // 모든 가능한 뎃셈과 뺄셈의 조합을 고려해야함으로 DFS 사용이 적합하다
-
-        return dfs(numbers, target, 0, 0);
+        DFS(numbers, target, 0, 0);
+        return count;
     }
 
-    public int dfs(int[] numbers, int target, int sum, int i) {
-
-        if (i == numbers.length) {  // 모든 숫자들에 대해 연산 진행 완료할 경우
-            if (sum == target) {    // 그 결과가 target 값과 동일할 경우
-                return 1;           // 경우의 수 + 1
-            }
-            return 0;
+    private void DFS(int[] numbers, int target, int index, int currentSum) {
+        if (index == numbers.length) {
+            if (currentSum == target) count++;
+            return;
         }
 
-        int result = 0;
-
-        result += dfs(numbers, target, sum + numbers[i], i + 1);
-        result += dfs(numbers, target, sum - numbers[i], i + 1);
-
-        return result;
+        DFS(numbers, target, index + 1, currentSum + numbers[index]);
+        DFS(numbers, target, index + 1, currentSum - numbers[index]);
     }
 
     public static void main(String[] args) {
-
         타겟넘버 targetNumber = new 타겟넘버();
 
         int[] numbers1 = {1, 1, 1, 1, 1};
-        int[] numbers2 = {4, 1, 2, 1};
+        System.out.println("targetNumber = " + targetNumber.solution(numbers1, 3));
 
-        System.out.println("Result : " + targetNumber.solution(numbers1, 3));
-        System.out.println("Result : " + targetNumber.solution(numbers2, 4));
+        int[] numbers2 = {4, 1, 2, 1};
+        System.out.println("targetNumber = " + targetNumber.solution(numbers2, 4));
     }
 }
