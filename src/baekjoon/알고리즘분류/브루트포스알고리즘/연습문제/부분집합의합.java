@@ -1,4 +1,4 @@
-package baekjoon.알고리즘분류.브루트포스.연습문제;
+package baekjoon.알고리즘분류.브루트포스알고리즘.연습문제;
 
 import java.io.*;
 import java.util.StringTokenizer;

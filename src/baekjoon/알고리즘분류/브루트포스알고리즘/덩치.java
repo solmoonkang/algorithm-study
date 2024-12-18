@@ -1,4 +1,4 @@
-package baekjoon.알고리즘분류.브루트포스;
+package baekjoon.알고리즘분류.브루트포스알고리즘;
 
 import java.io.*;
 import java.util.ArrayList;
