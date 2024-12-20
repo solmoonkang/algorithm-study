@@ -27,23 +27,25 @@ public class N과M_12 {
         Arrays.sort(numbers);
         sequences = new int[M];
 
-        generateSequences(0);
+        generateSequences(0, 0);
         bufferedWriter.write(stringBuilder.toString());
         bufferedWriter.flush();
         bufferedWriter.close();
         bufferedReader.close();
     }
 
-    private static void generateSequences(int depth) {
+    private static void generateSequences(int start, int depth) {
         if (depth == M) {
             for (int number : sequences) stringBuilder.append(number).append(" ");
             stringBuilder.append("\n");
             return;
         }
 
-        for (int i = 0; i < N; i++) {
+        for (int i = start; i < N; i++) {
+            if (i > start && numbers[i] == numbers[i - 1]) continue;
+
             sequences[depth] = numbers[i];
-            generateSequences(depth + 1);
+            generateSequences(i, depth + 1);
         }
     }
 }
