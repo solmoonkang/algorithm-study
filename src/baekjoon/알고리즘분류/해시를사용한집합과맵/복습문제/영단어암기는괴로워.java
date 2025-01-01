@@ -52,7 +52,7 @@ public class 영단어암기는괴로워 {
             if (entry.getKey().length() >= minLength) filteredList.add(entry);
         }
 
-        Collections.sort(filteredList, (entry1, entry2) -> {
+        filteredList.sort((entry1, entry2) -> {
             int compare = entry2.getValue().compareTo(entry1.getValue());
             if (compare == 0) {
                 compare = entry2.getKey().length() - entry1.getKey().length();
