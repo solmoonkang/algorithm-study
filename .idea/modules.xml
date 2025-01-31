@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/backjoon/backjoon.iml" filepath="$PROJECT_DIR$/backjoon/backjoon.iml" />
       <module fileurl="file://$PROJECT_DIR$/design_pattern/design_pattern.iml" filepath="$PROJECT_DIR$/design_pattern/design_pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/programmers/programmers.iml" filepath="$PROJECT_DIR$/programmers/programmers.iml" />
       <module fileurl="file://$PROJECT_DIR$/programmers-coding-test.iml" filepath="$PROJECT_DIR$/programmers-coding-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/programmers_java/programmers_java.iml" filepath="$PROJECT_DIR$/programmers_java/programmers_java.iml" />
     </modules>
