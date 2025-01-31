@@ -3,6 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .idea/inspectionProfiles/Project_Default.xml
+*.iml
 
 ### Eclipse ###
 .apt_generated
