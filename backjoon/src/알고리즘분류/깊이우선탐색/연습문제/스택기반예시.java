@@ -3,7 +3,7 @@ package 알고리즘분류.깊이우선탐색.연습문제;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class StackExample {
+public class 스택기반예시 {
 
     public void DFS(int start, boolean[] visited, ArrayList<Integer>[] arrayLists, ArrayList<Integer> procedure) {
         Stack<Integer> stack = new Stack<>();

@@ -2,7 +2,7 @@ package 알고리즘분류.깊이우선탐색.연습문제;
 
 import java.util.ArrayList;
 
-public class RecursiveExample {
+public class 재귀호출예시 {
 
     public void DFS(int start, boolean[] visited, ArrayList<Integer>[] arrayLists, ArrayList<Integer> procedure) {
         // 방문 배열이 true면 return

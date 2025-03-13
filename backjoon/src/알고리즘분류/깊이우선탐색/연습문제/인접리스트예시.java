@@ -2,7 +2,7 @@ package 알고리즘분류.깊이우선탐색.연습문제;
 
 import java.util.ArrayList;
 
-public class AdjacencyListExample {
+public class 인접리스트예시 {
 
     static final int N = 7;
 
@@ -22,15 +22,15 @@ public class AdjacencyListExample {
         arrayLists[3].add(4);
         arrayLists[4].add(6);
 
-        StackExample stackExample = new StackExample();
-        stackExample.DFS(1, visited, arrayLists, procedure);
+        스택기반예시 스택기반예시 = new 스택기반예시();
+        스택기반예시.DFS(1, visited, arrayLists, procedure);
         System.out.println("stack procedure = " + procedure);
 
         visited = new boolean[N];
         procedure.clear();
 
-        RecursiveExample recursiveExample = new RecursiveExample();
-        recursiveExample.DFS(1, visited, arrayLists, procedure);
+        재귀호출예시 재귀호출예시 = new 재귀호출예시();
+        재귀호출예시.DFS(1, visited, arrayLists, procedure);
         System.out.println("recursive procedure = " + procedure);
     }
 }
