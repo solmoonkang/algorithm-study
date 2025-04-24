@@ -1,4 +1,4 @@
-package 기출문제.PCCE기출문제.LV1;
+package 기출문제.PCCE기출문제;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package 기출문제.PCCE기출문제.LV0;
+package 기출문제.PCCE기출문제;
 
 public class 닉네임규칙 {
 
