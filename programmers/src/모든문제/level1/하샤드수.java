@@ -27,4 +27,9 @@ public class 하샤드수 {
 
         return original % digitSum == 0;
     }
+
+    private static boolean anotherSolution(int number) {
+        int sum = String.valueOf(number).chars().map(num -> num - '0').sum();
+        return number % sum == 0;
+    }
 }
