@@ -1,8 +1,9 @@
 package 모든문제.level2;
 
 import java.io.*;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.StringTokenizer;
 
 public class 주식가격 {
 
