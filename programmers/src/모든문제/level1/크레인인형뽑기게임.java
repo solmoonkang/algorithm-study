@@ -75,9 +75,9 @@ public class 크레인인형뽑기게임 {
             if (!bucket.isEmpty() && bucket.peekLast() == doll) {
                 bucket.pollLast();
                 explodedDolls += 2;
-                continue;
+            } else {
+                bucket.offerLast(doll);
             }
-            bucket.offerLast(doll);
 
             // 인형을 집어 올렸으므로, board에서 해당 위치를 빈칸으로 만듦
             board[currentRowTopIndex][currentColumnIndex] = 0;
