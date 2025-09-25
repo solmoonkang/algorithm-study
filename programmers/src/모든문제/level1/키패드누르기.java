@@ -30,9 +30,7 @@ public class 키패드누르기 {
 
         StringBuilder stringBuilder = new StringBuilder();
 
-        for (int i = 0; i < numbers.length; i++) {
-            int targetNumber = numbers[i];
-
+        for (int targetNumber : numbers) {
             // 키패드 1, 4, 7이 나온다면 현재 왼손 위치를 최신화하고, StringBuilder에 L을 추가
             if (targetNumber == 1 || targetNumber == 4 || targetNumber == 7) {
                 leftIndex = targetNumber;
@@ -54,9 +52,7 @@ public class 키패드누르기 {
                 if (leftDistance < rightDistance) {
                     leftIndex = targetNumber;
                     stringBuilder.append("L");
-                }
-
-                else if (leftDistance > rightDistance) {
+                } else if (leftDistance > rightDistance) {
                     rightIndex = targetNumber;
                     stringBuilder.append("R");
                 }
