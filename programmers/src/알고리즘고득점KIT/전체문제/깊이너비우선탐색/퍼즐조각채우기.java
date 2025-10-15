@@ -1,4 +1,4 @@
-package 알고리즘고득점KIT.깊이너비우선탐색;
+package 알고리즘고득점KIT.전체문제.깊이너비우선탐색;
 
 import java.util.ArrayList;
 import java.util.List;

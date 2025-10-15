@@ -1,4 +1,4 @@
-package 알고리즘고득점KIT.동적계획법;
+package 알고리즘고득점KIT.전체문제.동적계획법;
 
 import java.io.*;
 

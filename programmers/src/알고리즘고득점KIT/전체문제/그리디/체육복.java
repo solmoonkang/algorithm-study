@@ -1,4 +1,4 @@
-package 알고리즘고득점KIT.그리디;
+package 알고리즘고득점KIT.전체문제.그리디;
 
 import java.io.*;
 import java.util.Arrays;

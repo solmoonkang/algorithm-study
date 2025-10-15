@@ -1,4 +1,4 @@
-package 알고리즘고득점KIT.해시;
+package 알고리즘고득점KIT.전체문제.해시;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package 알고리즘고득점KIT.완전탐색;
+package 알고리즘고득점KIT.전체문제.완전탐색;
 
 import java.io.*;
 import java.util.HashSet;

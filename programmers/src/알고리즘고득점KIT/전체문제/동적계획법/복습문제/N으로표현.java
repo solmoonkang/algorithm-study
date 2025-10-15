@@ -1,4 +1,4 @@
-package 알고리즘고득점KIT.동적계획법.복습문제;
+package 알고리즘고득점KIT.전체문제.동적계획법.복습문제;
 
 import java.io.*;
 import java.util.HashSet;
