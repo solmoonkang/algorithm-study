@@ -15,7 +15,7 @@ public class 별찍기1 {
         StringBuilder stringBuilder = new StringBuilder();
 
         // 입력으로 주어진 정수 N만큼의 별을 찍기 위한 반복문
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i <= N; i++) {
             // stringBuilder.append(STAR).append("\n");     // ❌ 이렇게 할 경우 한 줄에 하나의 별만 찍고 총 5개의 별이 출력된다.
 
             for (int j = 0; j < i; j++) {
