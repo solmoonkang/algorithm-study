@@ -24,17 +24,12 @@ public class 연속부분수열합의개수 {
     }
 
     private static int countUniqueCircularSubarraySums(int[] elements) {
-        // 원형 수열의 모든 연속 부분 합을 구하는 가장 명확하고 안전한 방법은 배열을 두 배로 확장하는 방법이다.
         int N = elements.length;
         Set<Integer> subarraySumSet = new HashSet<>();
-
-        // elements 배열을 두 개 이어붙인다고 생각하고 실제 배열 선언이 아닌, 인덱스 계산으로 처리한다.
-        // (index % N)을 사용하여 가상으로 확장된 배열에 접근한다.
 
         for (int start = 0; start < N; start++) {
             int currentSum = 0;
 
-            // start 지점으로부터 length 길이만큼 떨어진 원소의 인덱스를 나머지 연산으로 구한다.
             for (int length = 1; length <= N; length++) {
                 int elementIndex = (start + length - 1) % N;
                 currentSum += elements[elementIndex];
@@ -42,6 +37,44 @@ public class 연속부분수열합의개수 {
             }
         }
 
+
+        return subarraySumSet.size();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    private static int countUniqueCircularSubarraySumsDemo(int[] elements) {
+        Set<Integer> subarraySumSet = new HashSet<>();
+        int N = elements.length;
+        int subarraySum = 0;
+
+        for (int i = 0; i < N; i++) {
+
+            // 내부 반복문 범위: 부분 수열의 길이를 의미하며, 부분 수열의 길이는 최소 1이어야 하며, 원형 수열의 최대 길이는 N까지 가능하다.
+            // 따라서 시작점 i가 고정되었을 때, 만들 수 있는 부분 수열의 길이는 1, 2, 3, ..., N이 된다.
+            for (int j = 1; j <= N; j++) {
+                // 인덱스 계산: 현재 j 길이의 부분 수열에 새로 추가될 원소의 인덱스를 찾는 역할을 한다.
+
+                // 인덱스 오프셋 보정(-1): 부분 수열의 길이는 1부터 세지만, 배열의 인덱스 오프셋은 0부터 카운트한다.
+                    // 따라서 길이 j의 부분 수열에 포함된 마지막 원소의 인덱스를 찾으려면 j-1을 빼서 오프셋을 맞춰야 한다.
+                // 원형 순환(%N): 오프셋이 결정된 후, 시작점 i와 오프셋을 더하면 새로운 원소의 인덱스가 나온다.
+                    // 임시 인덱스 = start(i) + (length(j) - 1)
+                    // 임시 인덱스가 배열의 끝 N-1을 넘어갈 때, 나머지 연산을 사용하면 자동으로 인덱스 0부터 순환하게 된다.
+                int index = (i + j - 1) % N;
+                subarraySum += elements[index];
+                subarraySumSet.add(subarraySum);
+            }
+        }
 
         return subarraySumSet.size();
     }
