@@ -8,8 +8,9 @@ public class 제출양식 {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
+        bufferedReader.close();
+
         bufferedWriter.flush();
         bufferedWriter.close();
-        bufferedReader.close();
     }
 }
