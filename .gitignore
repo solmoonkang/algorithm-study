@@ -1,11 +1,24 @@
-### IntelliJ IDEA ###
+### 프로젝트 공통 제외 항목 ###
+# 빌드 결과물 및 임시 파일
 out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-.idea/inspectionProfiles/Project_Default.xml
-*.iml
+bin/
+*.class
+*.log
 
-### Eclipse ###
+# OS 관련 임시 파일 (Mac/Windows)
+.DS_Store
+Thumbs.db
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+.gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+### 기타 IDE (Eclipse, NetBeans) ###
 .apt_generated
 .classpath
 .factorypath
@@ -13,19 +26,8 @@ out/
 .settings
 .springBeans
 .sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
-
-### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-
-### VS Code ###
-.vscode/
-
-### Mac OS ###
-.DS_Store
