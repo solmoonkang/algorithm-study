@@ -5,6 +5,8 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 
 public class 최댓값과최솟값 {
 
@@ -36,5 +38,13 @@ public class 최댓값과최솟값 {
 		}
 
 		return min + " " + max;
+	}
+
+	private static String getMinAndMaxNumbersForStream(String numbers) {
+		IntSummaryStatistics intSummaryStatistics = Arrays.stream(numbers.split(" "))
+			.mapToInt(Integer::parseInt)
+			.summaryStatistics();
+
+		return intSummaryStatistics.getMin() + " " + intSummaryStatistics.getMax();
 	}
 }
