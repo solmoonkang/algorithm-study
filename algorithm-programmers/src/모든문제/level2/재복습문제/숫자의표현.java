@@ -23,7 +23,6 @@ public class 숫자의표현 {
 	// 연속된 자연수들로 N을 표현하는 방법의 수를 구하라는 조건
 	// 		-> 내가 처음에 생각한 방법은 브루트포스
 	// 		-> 그 외 다른 방법으로는 투 포인터 전략
-	// 		-> 수학적 접근으로는 약수
 
 	private static int countConsecutiveSumForBruteForce(int N) {
 		/*
@@ -67,12 +66,25 @@ public class 숫자의표현 {
 	}
 
 	private static int countConsecutiveSumForTwoPointer(int N) {
+		int count = 1, sum = 1;
+		int left = 1, right = 1;
 
+		while (right < N) {
+			if (sum < N) {
+				right++;
+				sum += right;
 
-	}
+			} else if (sum > N) {
+				sum -= left;
+				left++;
 
-	private static int countConsecutiveSumForDivisor(int N) {
+			} else {
+				count++;
+				right++;
+				sum += right;
+			}
+		}
 
-
+		return count;
 	}
 }
