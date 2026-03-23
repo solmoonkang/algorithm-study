@@ -21,7 +21,7 @@ public class 피보나치수 {
 		bufferedWriter.close();
 	}
 
-	private static int getFibonacciRemainder(int N) {
+	private static int getFibonacciRemainderForDP(int N) {
 		int[] fibonacciNumbers = new int[N + 1];
 
 		fibonacciNumbers[0] = 0;
@@ -32,5 +32,19 @@ public class 피보나치수 {
 		}
 
 		return fibonacciNumbers[N];
+	}
+
+	private static int getFibonacciRemainder(int N) {
+		int previous1 = 1;
+		int previous2 = 0;
+		int current = 0;
+
+		for (int i = 2; i <= N; i++) {
+			current = (previous1 + previous2) % MOD;
+			previous2 = previous1;
+			previous1 = current;
+		}
+
+		return current;
 	}
 }
