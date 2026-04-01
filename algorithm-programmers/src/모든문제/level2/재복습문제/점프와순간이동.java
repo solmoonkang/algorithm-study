@@ -33,4 +33,8 @@ public class 점프와순간이동 {
 
 		return jumpCount;
 	}
+
+	private static int getMinBatteryUsageForBit(int N) {
+		return Integer.bitCount(N);
+	}
 }
